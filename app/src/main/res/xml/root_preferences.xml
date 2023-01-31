@@ -1,0 +1,35 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <PreferenceCategory
+        android:title="Counting"
+        app:icon="@drawable/baseline_add_box_24">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="steps_check_box"
+            android:summaryOff="Count step selection disabled"
+            android:summaryOn="Count steps selection enabled"
+            android:title="Don't display steps to count"
+            app:icon="@drawable/baseline_plus_one_24" />
+        <ListPreference
+            android:defaultValue="1"
+            android:dependency="steps_check_box"
+            android:entries="@array/adding_steps_entries"
+            android:entryValues="@array/steps_values"
+            android:key="adding_preference"
+            android:title="Select an adding step"
+            app:icon="@drawable/baseline_plus_24"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            android:defaultValue="1"
+            android:dependency="steps_check_box"
+            android:entries="@array/decrease_steps_entries"
+            android:entryValues="@array/steps_values"
+            android:key="decrease_preference"
+            android:title="Select a decreasing step"
+            app:icon="@drawable/baseline_minus_24"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.supersonic.cigarettescounting.MainFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioGroup
+                    android:id="@+id/plusRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/plusRadioButton1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:fontFamily="@font/krona_one"
+                        android:text="+1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/plusRadioButton2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/krona_one"
+                        android:text="+3"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/plusRadioButton3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/krona_one"
+                        android:text="+5"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/plusRadioButton4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/krona_one"
+                        android:text="+10"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/minusRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/minusRadioButton1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:fontFamily="@font/krona_one"
+                        android:text="-1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/minusRadioButton2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/krona_one"
+                        android:text="-3"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/minusRadioButton3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/krona_one"
+                        android:text="-5"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/minusRadioButton4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/krona_one"
+                        android:text="-10"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/quantityTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:bufferType="spannable"
+                    android:fontFamily="@font/anton"
+                    android:text="0"
+                    android:textColor="@color/colorPrimaryVariant"
+                    android:textSize="250sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/timeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last update:"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <Switch
+                android:id="@+id/switch3"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:checked="true"
+                android:showText="false"
+                android:switchMinWidth="60dp"
+                android:switchTextAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#000000"
+                android:textOff="-"
+                android:textOn="+"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timeTextView"
+                app:layout_constraintVertical_bias="0.465" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="-"
+                android:textSize="60sp"
+                app:layout_constraintBottom_toBottomOf="@+id/switch3"
+                app:layout_constraintEnd_toStartOf="@+id/switch3"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toTopOf="@+id/switch3" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="+"
+                android:textSize="60sp"
+                app:layout_constraintBottom_toBottomOf="@+id/switch3"
+                app:layout_constraintStart_toEndOf="@+id/switch3"
+                app:layout_constraintTop_toTopOf="@+id/switch3" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </layout>
